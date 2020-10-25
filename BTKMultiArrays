@@ -1,0 +1,49 @@
+ //Çoklu dizilerle istenilen verileri girip diziye kaydedip ekrana yazdırdık
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String[][] sehirler = new String[3][3];
+        Scanner girdi = new Scanner(System.in);
+        System.out.println("Lütfen istenilen bolgelerden 3 sehir girin : ");
+        System.out.println("            -------------          ");
+        for (int i = 0; i <= 2; i++) {
+              if(i == 0){
+                  System.out.println("Marmara bolgesi : ");
+              }
+              else if(i==1){
+                  System.out.println("Ic Anadolu bolgesi : ");
+              }
+              else {
+                  System.out.println("Ege bolgesi : ");
+              }
+            for (int j = 0; j <= 2; j++) {
+                sehirler[i][j] = girdi.next();
+            }
+        }
+        System.out.println("---------------------------------");
+        for (int i = 0; i <= 2; i++) {
+
+            if(i == 0){
+                System.out.println("            -------------          ");
+                System.out.println("Marmara bolgesi : ");
+
+            }
+            else if(i==1){
+                System.out.println("            -------------          ");
+                System.out.println("Ic Anadolu bolgesi : ");
+
+            }
+            else {
+                System.out.println("            -------------          ");
+                System.out.println("Ege bolgesi : ");
+
+            }
+            for (int j = 0; j <= 2; j++) {
+
+                System.out.println(sehirler[i][j]);
+            }
+        }
+    }
+}
