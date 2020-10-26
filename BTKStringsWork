@@ -1,0 +1,26 @@
+ //BTK dan string çalışmaları ile tekrar 
+public class Main {
+
+    public static void main(String[] args) {
+        String mesaj = "Merhaba , bugun hava cok guzel";
+         System.out.println(mesaj);
+         System.out.println(mesaj.replace(' ', '/'));
+        String yeniMesaj = mesaj.replace(',', '9');
+         System.out.println(yeniMesaj);
+         System.out.println(mesaj.substring(10));
+        //substring belirtilen yerden belirtilen yere kadar stringi yazdırır
+        // sonu belirtmediysen en sona kadar gider
+         for (String kelime : mesaj.split(" ")){
+            System.out.println(kelime);
+         }
+         for (String kelime1 : mesaj.split(",")){
+            System.out.println(kelime1);
+         }
+         System.out.println(mesaj.toUpperCase());
+         System.out.println(mesaj.toLowerCase());
+        String mesaj2 = "        Merhaba , bugun hava cok guzel        ";
+         System.out.println(mesaj2);
+         System.out.println(mesaj2.trim());
+        // trim ile baştaki ve sondaki boslukları attık
+    }
+}
