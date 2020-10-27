@@ -1,0 +1,28 @@
+//  is a prime number?
+public class Main {
+
+    public static void main(String[] args) {
+	 int number = -5;
+	 boolean isPrime = true;//kontrol=0 yapmak yerine bir boolean döndürdük daha karlı
+	  if(number==1){
+          System.out.println("Sayi asal degildir");
+          return;
+      }//burada kullanıcının bizim istemediğimiz girdileri girmesine karşı defensive if ler oluşturuyoruz
+	  if (number<1){
+          System.out.println("Gecersiz sayi");
+          return;
+      }
+
+        for (int i = 2; i < number; i++) {
+            if (number % i ==0){
+                isPrime = false;
+            }
+        }
+         if (isPrime){
+             System.out.println("Sayi asaldir");
+         }
+         else{
+             System.out.println("Sayi asal degildir");
+         }
+    }
+}
